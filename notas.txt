@@ -1,0 +1,13 @@
+go mod init github.com/gitterencio/go-ag-static
+
+go get github.com/gofiber/fiber/v2
+
+export GOPATH=$HOME/xxxxx
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin 
+
+
+mkdir models
+mkdir models/users
+touch models/users/users.routes.go
+touch models/users/users.handle.go
