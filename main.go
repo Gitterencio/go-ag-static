@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	engine := django.New("./views", ".html")
+	engine := django.New("./public/views", ".html")
 
 	app := fiber.New(fiber.Config{
 		Views: engine,
