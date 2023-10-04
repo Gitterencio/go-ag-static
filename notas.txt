@@ -2,6 +2,8 @@ go mod init github.com/gitterencio/go-ag-static
 
 go get github.com/gofiber/fiber/v2
 
+go get github.com/gofiber/template/django/v3
+
 export GOPATH=$HOME/xxxxx
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$(go env GOPATH)/bin 
