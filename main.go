@@ -25,7 +25,12 @@ func main() {
 	serverGroup.Route("/", routes.ServerRouter)
 
 	//STATIC SPA ANGULAR
-	app.Static("/*", "./front_wha_tar")
+
+	app.Static("/", "front_wha_tar")
+
+	app.Get("/*", func(ctx *fiber.Ctx) error {
+		return ctx.SendFile("./front_wha_tar/index.html")
+	})
 
 	app.Listen(":3000")
 }
